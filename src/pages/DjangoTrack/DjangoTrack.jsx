@@ -1,10 +1,47 @@
 import { useNavigate } from 'react-router-dom'
 import Button from '../../components/ui/Button/Button'
+import LevelCard from '../../components/cards/LevelCard/LevelCard'
 import Navbar from '../../components/layout/Navbar/Navbar'
 import './DjangoTrack.css'
 
 function DjangoTrack() {
   const navigate = useNavigate()
+
+  const levels = [
+    {
+      id: 1,
+      level: 'Django Intro',
+      icon: '🐍',
+      description: 'Learn the fundamentals of Django including models, views, templates, and URLs. Perfect for beginners starting with Django web development.',
+      gradient: 'linear-gradient(135deg, #092E20 0%, #0D4A35 100%)',
+      color: '#092E20',
+    },
+    {
+      id: 2,
+      level: 'Django Intermediate',
+      icon: '⚙️',
+      description: 'Dive deeper into Django with forms, authentication, admin customization, and REST APIs. Build more complex web applications.',
+      gradient: 'linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%)',
+      color: '#2E7D32',
+    },
+    {
+      id: 3,
+      level: 'Django Advanced',
+      icon: '🏗️',
+      description: 'Master advanced Django patterns, deployment, performance optimization, testing, and building scalable Django applications.',
+      gradient: 'linear-gradient(135deg, #1B5E20 0%, #388E3C 100%)',
+      color: '#1B5E20',
+    },
+  ]
+
+  const handleLevelStart = (levelId) => {
+    const routes = {
+      1: '/django/intro',
+      2: '/django/intermediate',
+      3: '/django/advanced',
+    }
+    navigate(routes[levelId] || '/django')
+  }
 
   return (
     <div className="app">
@@ -15,9 +52,23 @@ function DjangoTrack() {
           <h1 className="track-title">Django Track</h1>
         </div>
         <p className="track-description">
-          Welcome to the Django learning track! Learn how to build powerful web applications
-          using Django, a high-level Python web framework.
+          Choose your learning level and start your Django journey. Progress from basics to advanced concepts.
         </p>
+        
+        <div className="levels-grid">
+          {levels.map((level) => (
+            <LevelCard
+              key={level.id}
+              level={level.level}
+              icon={level.icon}
+              description={level.description}
+              onStart={() => handleLevelStart(level.id)}
+              gradient={level.gradient}
+              color={level.color}
+            />
+          ))}
+        </div>
+
         <div className="track-actions">
           <Button onClick={() => navigate('/topics')} variant="outline">
             ← Back to Topics

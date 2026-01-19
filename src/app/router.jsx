@@ -10,6 +10,9 @@ import JsIntro from '../pages/JsTrack/JsIntro'
 import JsIntermediate from '../pages/JsTrack/JsIntermediate'
 import JsAdvanced from '../pages/JsTrack/JsAdvanced'
 import DjangoTrack from '../pages/DjangoTrack/DjangoTrack'
+import DjangoIntro from '../pages/DjangoTrack/DjangoIntro'
+import DjangoIntermediate from '../pages/DjangoTrack/DjangoIntermediate'
+import DjangoAdvanced from '../pages/DjangoTrack/DjangoAdvanced'
 
 export const router = createBrowserRouter([
   {
@@ -55,6 +58,18 @@ export const router = createBrowserRouter([
   {
     path: '/django',
     element: <DjangoTrack />,
+  },
+  {
+    path: '/django/intro',
+    element: <DjangoIntro />,
+  },
+  {
+    path: '/django/intermediate',
+    element: <DjangoIntermediate />,
+  },
+  {
+    path: '/django/advanced',
+    element: <DjangoAdvanced />,
   },
 ])
 
