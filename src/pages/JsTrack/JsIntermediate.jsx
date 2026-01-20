@@ -225,8 +225,8 @@ function JsIntermediate() {
         </div>
 
         <div className="level-actions">
-          <Button onClick={() => navigate('/javascript')} variant="outline">
-            ← Back to JavaScript Track
+          <Button onClick={() => navigate('/javascript/intro')} variant="outline">
+            ← Back to Intro
           </Button>
           <Button onClick={() => navigate('/javascript/advanced')} variant="primary">
             Next: Advanced →

@@ -2,17 +2,25 @@ import { createBrowserRouter } from 'react-router-dom'
 import Home from '../pages/Home/Home'
 import Topics from '../pages/Topics/Topics'
 import ReactTrack from '../pages/ReactTrack/ReactTrack'
-import ReactIntro from '../pages/ReactTrack/ReactIntro'
-import ReactIntermediate from '../pages/ReactTrack/ReactIntermediate'
-import ReactAdvanced from '../pages/ReactTrack/ReactAdvanced'
+import ReactIntroIndex from '../pages/ReactTrack/ReactIntro/index'
+import ReactBasicsQA from '../pages/ReactTrack/ReactIntro/ReactBasicsQA'
+import ReactIntermediateIndex from '../pages/ReactTrack/ReactIntermediate/index'
+import IntermediateQA from '../pages/ReactTrack/ReactIntermediate/IntermediateQA'
+import ReactAdvancedIndex from '../pages/ReactTrack/ReactAdvanced/index'
+import ReactAndDjango from '../pages/ReactTrack/ReactAdvanced/ReactAndDjango'
+import ReactAndDjangoQA from '../pages/ReactTrack/ReactAdvanced/ReactAndDjangoQA'
+import ReactAdvancedArticle from '../pages/ReactTrack/ReactAdvanced/ReactAdvancedArticle'
 import JsTrack from '../pages/JsTrack/JsTrack'
 import JsIntro from '../pages/JsTrack/JsIntro'
 import JsIntermediate from '../pages/JsTrack/JsIntermediate'
 import JsAdvanced from '../pages/JsTrack/JsAdvanced'
 import DjangoTrack from '../pages/DjangoTrack/DjangoTrack'
-import DjangoIntro from '../pages/DjangoTrack/DjangoIntro'
-import DjangoIntermediate from '../pages/DjangoTrack/DjangoIntermediate'
-import DjangoAdvanced from '../pages/DjangoTrack/DjangoAdvanced'
+import DjangoIntroIndex from '../pages/DjangoTrack/DjangoIntro/index'
+import DjangoBasicsQA from '../pages/DjangoTrack/DjangoIntro/DjangoBasicsQA'
+import DjangoIntermediateIndex from '../pages/DjangoTrack/DjangoIntermediate/index'
+import DjangoIntermediateQA from '../pages/DjangoTrack/DjangoIntermediate/IntermediateQA'
+import DjangoAdvancedIndex from '../pages/DjangoTrack/DjangoAdvanced/index'
+import DjangoAdvancedQA from '../pages/DjangoTrack/DjangoAdvanced/AdvancedQA'
 
 export const router = createBrowserRouter([
   {
@@ -29,15 +37,41 @@ export const router = createBrowserRouter([
   },
   {
     path: '/react/intro',
-    element: <ReactIntro />,
+    element: <ReactIntroIndex />,
+    children: [
+      {
+        path: 'react-basics',
+        element: <ReactBasicsQA />,
+      },
+    ],
   },
   {
     path: '/react/intermediate',
-    element: <ReactIntermediate />,
+    element: <ReactIntermediateIndex />,
+    children: [
+      {
+        path: 'intermediate-qa',
+        element: <IntermediateQA />,
+      },
+    ],
   },
   {
     path: '/react/advanced',
-    element: <ReactAdvanced />,
+    element: <ReactAdvancedIndex />,
+    children: [
+      {
+        path: 'react-and-django',
+        element: <ReactAndDjango />,
+      },
+      {
+        path: 'react-advanced',
+        element: <ReactAdvancedArticle />,
+      },
+      {
+        path: 'common-questions',
+        element: <ReactAndDjangoQA />,
+      },
+    ],
   },
   {
     path: '/javascript',
@@ -61,15 +95,33 @@ export const router = createBrowserRouter([
   },
   {
     path: '/django/intro',
-    element: <DjangoIntro />,
+    element: <DjangoIntroIndex />,
+    children: [
+      {
+        path: 'django-basics',
+        element: <DjangoBasicsQA />,
+      },
+    ],
   },
   {
     path: '/django/intermediate',
-    element: <DjangoIntermediate />,
+    element: <DjangoIntermediateIndex />,
+    children: [
+      {
+        path: 'intermediate-qa',
+        element: <DjangoIntermediateQA />,
+      },
+    ],
   },
   {
     path: '/django/advanced',
-    element: <DjangoAdvanced />,
+    element: <DjangoAdvancedIndex />,
+    children: [
+      {
+        path: 'advanced-qa',
+        element: <DjangoAdvancedQA />,
+      },
+    ],
   },
 ])
 

@@ -251,8 +251,8 @@ function JsAdvanced() {
         </div>
 
         <div className="level-actions">
-          <Button onClick={() => navigate('/javascript')} variant="outline">
-            ← Back to JavaScript Track
+          <Button onClick={() => navigate('/javascript/intermediate')} variant="outline">
+            ← Back to Intermediate
           </Button>
         </div>
       </div>

@@ -28,8 +28,8 @@ function ReactAdvanced() {
         </div>
 
         <div className="level-actions">
-          <Button onClick={() => navigate('/react')} variant="outline">
-            ← Back to React Track
+          <Button onClick={() => navigate('/react/intermediate')} variant="outline">
+            ← Back to Intermediate
           </Button>
         </div>
       </div>
@@ -38,4 +38,5 @@ function ReactAdvanced() {
 }
 
 export default ReactAdvanced
+
 

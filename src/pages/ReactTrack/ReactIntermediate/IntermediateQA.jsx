@@ -1,12 +1,6 @@
-import { useNavigate } from 'react-router-dom'
-import Button from '../../components/ui/Button/Button'
-import Navbar from '../../components/layout/Navbar/Navbar'
-import reactLogo from '../../assets/react.webp'
-import './ReactIntermediate.css'
+import './Article.css'
 
-function ReactIntermediate() {
-  const navigate = useNavigate()
-
+function IntermediateQA() {
   const qaData = [
     {
       question: 'Why does the public/ folder exist, and what belongs there?',
@@ -302,88 +296,74 @@ const { user, login } = useAuth();`
   ]
 
   return (
-    <div className="app">
-      <Navbar />
-      <div className="level-page-container">
-        <div className="level-header">
-          <div className="level-logo">
-            <img src={reactLogo} alt="React logo" className="level-logo-image" />
-          </div>
-          <h1 className="level-title">React.js Track — Intermediate</h1>
-        </div>
+    <div className="article-content">
+      <div className="article-header">
+        <h1 className="article-title">React.js Track — Intermediate</h1>
+      </div>
 
-        <div className="level-content">
-          <section className="intro-section">
-            <h2 className="section-title">React Intermediate — Q&A</h2>
-            <p className="section-text">
-              Master intermediate React concepts including project structure, hooks, and best practices.
-            </p>
-          </section>
+      <div className="article-body">
+        <section className="intro-section">
+          <h2 className="section-title">React Intermediate — Q&A</h2>
+          <p className="section-text">
+            Master intermediate React concepts including project structure, hooks, and best practices.
+          </p>
+        </section>
 
-          {qaData.map((qa, index) => (
-            <div key={index} className="qa-section">
-              <div className="qa-question">
-                <span className="question-icon">❓</span>
-                <h2 className="question-text">{qa.question}</h2>
-              </div>
-              
-              <div className="qa-answer">
-                <h3 className="answer-label">Answer:</h3>
-                {qa.answerPoints ? (
-                  <ul className="answer-points">
-                    {qa.answerPoints.map((point, idx) => {
-                      const isNested = point.startsWith('  •');
-                      return (
-                        <li 
-                          key={idx} 
-                          className="answer-point"
-                          data-nested={isNested}
-                        >
-                          {point}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                ) : (
-                  <p className="answer-text">{qa.answer}</p>
-                )}
-              </div>
-
-              {qa.code && (
-                <div className="qa-code">
-                  <pre className="code-block">
-                    <code>{qa.code}</code>
-                  </pre>
-                </div>
+        {qaData.map((qa, index) => (
+          <div key={index} className="qa-section">
+            <div className="qa-question">
+              <span className="question-icon">❓</span>
+              <h2 className="question-text">{qa.question}</h2>
+            </div>
+            
+            <div className="qa-answer">
+              <h3 className="answer-label">Answer:</h3>
+              {qa.answerPoints ? (
+                <ul className="answer-points">
+                  {qa.answerPoints.map((point, idx) => {
+                    const isNested = point.startsWith('  •');
+                    return (
+                      <li 
+                        key={idx} 
+                        className="answer-point"
+                        data-nested={isNested}
+                      >
+                        {point}
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : (
+                <p className="answer-text">{qa.answer}</p>
               )}
             </div>
-          ))}
 
-          <div className="final-thought">
-            <h2 className="final-title">Final Opinion (Unfiltered)</h2>
-            <p className="final-text">
-              React doesn't fail projects. Bad structure does.
-            </p>
-            <p className="final-text">
-              If your structure is solid: Hooks feel obvious, Bugs are local, Refactoring is safe.
-            </p>
-            <p className="final-text emphasis">
-              That's professional React.
-            </p>
+            {qa.code && (
+              <div className="qa-code">
+                <pre className="code-block">
+                  <code>{qa.code}</code>
+                </pre>
+              </div>
+            )}
           </div>
-        </div>
+        ))}
 
-        <div className="level-actions">
-          <Button onClick={() => navigate('/react/intro')} variant="outline">
-            ← Back to Intro
-          </Button>
-          <Button onClick={() => navigate('/react/advanced')} variant="primary">
-            Next: Advanced →
-          </Button>
+        <div className="final-thought">
+          <h2 className="final-title">Final Opinion (Unfiltered)</h2>
+          <p className="final-text">
+            React doesn't fail projects. Bad structure does.
+          </p>
+          <p className="final-text">
+            If your structure is solid: Hooks feel obvious, Bugs are local, Refactoring is safe.
+          </p>
+          <p className="final-text emphasis">
+            That's professional React.
+          </p>
         </div>
       </div>
     </div>
   )
 }
 
-export default ReactIntermediate
+export default IntermediateQA
+

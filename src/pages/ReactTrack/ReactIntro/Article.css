@@ -1,65 +1,28 @@
-.level-page-container {
-  max-width: 1200px;
+.article-content {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  padding-top: 6rem;
-  width: 100%;
 }
 
-.level-header {
-  text-align: center;
-  margin-bottom: 3rem;
+.article-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #E8E8E8;
 }
 
-.level-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.level-logo-image {
-  max-width: 100px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.level-title {
+.article-title {
   font-size: 2.5rem;
   color: #8B0000;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.level-content {
-  margin-bottom: 3rem;
-}
-
-.intro-section {
-  background: #FFFFFF;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  color: #8B0000;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.section-text {
+.article-body {
   font-size: 1.1rem;
-  color: #666;
+  color: #333;
   line-height: 1.8;
-  margin: 0;
 }
 
+/* Q&A Section Styles */
 .qa-section {
   background: #FFFFFF;
   border-radius: 12px;
@@ -115,41 +78,6 @@
   margin: 0;
 }
 
-.answer-points {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.answer-point {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 0.75rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.answer-point::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #61DAFB;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-/* Nested items (those starting with spaces) - hide the ::before since they have their own bullet in text */
-.answer-point[data-nested="true"]::before {
-  display: none;
-}
-
-.answer-point[data-nested="true"] {
-  padding-left: 2.5rem;
-  color: #666;
-  font-size: 1rem;
-}
-
 .qa-code {
   margin-top: 1.5rem;
   background: #1e1e1e;
@@ -194,29 +122,12 @@
 .final-text {
   font-size: 1.2rem;
   line-height: 1.8;
-  margin: 0.5rem 0;
-}
-
-.final-text.emphasis {
-  font-weight: 600;
-  font-size: 1.3rem;
-  margin-top: 1rem;
-}
-
-.level-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
+  margin: 0;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
-  .level-page-container {
-    padding-top: 8rem;
-  }
-
-  .level-title {
+  .article-title {
     font-size: 2rem;
   }
 
@@ -258,3 +169,4 @@
     font-size: 1rem;
   }
 }
+

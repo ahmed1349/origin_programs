@@ -1,40 +1,25 @@
-.level-page-container {
-  max-width: 1200px;
+.article-content {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  padding-top: 6rem;
-  width: 100%;
 }
 
-.level-header {
-  text-align: center;
-  margin-bottom: 3rem;
+.article-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #E8E8E8;
 }
 
-.level-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.level-logo-image {
-  max-width: 100px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.level-title {
+.article-title {
   font-size: 2.5rem;
   color: #8B0000;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.level-content {
-  margin-bottom: 3rem;
+.article-body {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
 }
 
 .intro-section {
@@ -60,6 +45,7 @@
   margin: 0;
 }
 
+/* Q&A Section Styles */
 .qa-section {
   background: #FFFFFF;
   border-radius: 12px;
@@ -139,7 +125,6 @@
   font-size: 1.2rem;
 }
 
-/* Nested items (those starting with spaces) - hide the ::before since they have their own bullet in text */
 .answer-point[data-nested="true"]::before {
   display: none;
 }
@@ -203,20 +188,8 @@
   margin-top: 1rem;
 }
 
-.level-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
 @media (max-width: 768px) {
-  .level-page-container {
-    padding-top: 8rem;
-  }
-
-  .level-title {
+  .article-title {
     font-size: 2rem;
   }
 
@@ -258,3 +231,4 @@
     font-size: 1rem;
   }
 }
+

@@ -1,65 +1,92 @@
-.level-page-container {
-  max-width: 1200px;
+.article-content {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  padding-top: 6rem;
-  width: 100%;
 }
 
-.level-header {
-  text-align: center;
-  margin-bottom: 3rem;
+.article-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #E8E8E8;
 }
 
-.level-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.level-logo-image {
-  max-width: 100px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.level-title {
+.article-title {
   font-size: 2.5rem;
   color: #8B0000;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.level-content {
-  margin-bottom: 3rem;
+.article-body {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
 }
 
-.intro-section {
-  background: #FFFFFF;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.section-title {
+.article-body h2 {
   font-size: 1.8rem;
   color: #8B0000;
   font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #E8E8E8;
+}
+
+.article-body h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.article-body h3 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-body p {
   margin-bottom: 1rem;
 }
 
-.section-text {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.8;
-  margin: 0;
+.article-body ul,
+.article-body ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
 }
 
+.article-body li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.article-body code {
+  background: #F5F5F5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  color: #8B0000;
+}
+
+.article-body pre {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid #333;
+}
+
+.article-body pre code {
+  background: transparent;
+  padding: 0;
+  color: #d4d4d4;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Q&A Section Styles */
 .qa-section {
   background: #FFFFFF;
   border-radius: 12px;
@@ -139,7 +166,6 @@
   font-size: 1.2rem;
 }
 
-/* Nested items (those starting with spaces) - hide the ::before since they have their own bullet in text */
 .answer-point[data-nested="true"]::before {
   display: none;
 }
@@ -197,27 +223,49 @@
   margin: 0.5rem 0;
 }
 
-.final-text.emphasis {
-  font-weight: 600;
-  font-size: 1.3rem;
-  margin-top: 1rem;
+.final-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.level-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
+.final-list li {
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.final-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
-  .level-page-container {
-    padding-top: 8rem;
+  .article-title {
+    font-size: 2rem;
   }
 
-  .level-title {
-    font-size: 2rem;
+  .article-body h2 {
+    font-size: 1.5rem;
+  }
+
+  .article-body h3 {
+    font-size: 1.3rem;
+  }
+
+  .article-body pre {
+    padding: 1rem;
+    font-size: 0.85rem;
   }
 
   .qa-section {
@@ -258,3 +306,4 @@
     font-size: 1rem;
   }
 }
+
