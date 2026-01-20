@@ -8,6 +8,11 @@ function DjangoAdvancedIndex() {
       title: 'Django Advanced Q&A',
       path: '/django/advanced/advanced-qa',
     },
+    {
+      id: 'project',
+      title: 'Project',
+      path: '/django/advanced/project',
+    },
   ]
 
   return (

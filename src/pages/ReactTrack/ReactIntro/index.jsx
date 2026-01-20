@@ -9,6 +9,11 @@ function ReactIntroIndex() {
       title: 'React Basics Q&A',
       path: '/react/intro/react-basics',
     },
+    {
+      id: 'project',
+      title: 'Project',
+      path: '/react/intro/project',
+    },
   ]
 
   return (

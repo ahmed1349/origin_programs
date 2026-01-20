@@ -126,6 +126,142 @@
   font-weight: 500;
 }
 
+/* Project Section Styles */
+.project-section {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-details {
+  background: #F8F9FA;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #61DAFB;
+}
+
+.details-title {
+  font-size: 1.3rem;
+  color: #61DAFB;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.details-text {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.instructions-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  counter-reset: instruction-counter;
+}
+
+.instructions-list > li {
+  counter-increment: instruction-counter;
+  margin-bottom: 1.5rem;
+  padding-left: 2.5rem;
+  position: relative;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.instructions-list > li::before {
+  content: counter(instruction-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #61DAFB;
+  color: #FFFFFF;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.instructions-list > li strong {
+  color: #61DAFB;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.nested-list {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.nested-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+.nested-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #61DAFB;
+  font-weight: bold;
+}
+
+.nested-list code {
+  background: #E8F4F8;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #61DAFB;
+}
+
+.requirements-list,
+.bonus-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.requirements-list li,
+.bonus-list li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.requirements-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.bonus-list li::before {
+  content: "⭐";
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 768px) {
   .article-title {
     font-size: 2rem;
@@ -167,6 +303,25 @@
 
   .final-text {
     font-size: 1rem;
+  }
+
+  .project-details {
+    padding: 1rem;
+  }
+
+  .details-title {
+    font-size: 1.1rem;
+  }
+
+  .instructions-list > li {
+    padding-left: 2rem;
+    font-size: 1rem;
+  }
+
+  .instructions-list > li::before {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.9rem;
   }
 }
 

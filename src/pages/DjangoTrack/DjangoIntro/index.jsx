@@ -8,6 +8,11 @@ function DjangoIntroIndex() {
       title: 'Django Basics Q&A',
       path: '/django/intro/django-basics',
     },
+    {
+      id: 'project',
+      title: 'Project',
+      path: '/django/intro/project',
+    },
   ]
 
   return (

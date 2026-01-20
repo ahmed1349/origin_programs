@@ -8,6 +8,11 @@ function DjangoIntermediateIndex() {
       title: 'Django Intermediate Q&A',
       path: '/django/intermediate/intermediate-qa',
     },
+    {
+      id: 'project',
+      title: 'Project',
+      path: '/django/intermediate/project',
+    },
   ]
 
   return (

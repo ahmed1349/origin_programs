@@ -19,6 +19,11 @@ function ReactAdvancedIndex() {
       title: 'Common Questions',
       path: '/react/advanced/common-questions',
     },
+    {
+      id: 'project',
+      title: 'Project',
+      path: '/react/advanced/project',
+    },
   ]
 
   return (

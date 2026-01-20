@@ -9,6 +9,11 @@ function ReactIntermediateIndex() {
       title: 'Intermediate Q&A',
       path: '/react/intermediate/intermediate-qa',
     },
+    {
+      id: 'project',
+      title: 'Project',
+      path: '/react/intermediate/project',
+    },
   ]
 
   return (
